@@ -1,5 +1,112 @@
+html,body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Oxygen, sans-serif;
+}
+
+#OVERLAY_ROOT {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 1920px;
+  height: 1080px;
+
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+#BAR {
+  position: relative;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 96px;
+
+  color: #ffffff;
+  background-color: #444455;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+#HIGHLIGHT_SECTION {
+  position: absolute;
+  right: 0;
+
+  width: 300px;
+  height: 96px;
+
+  color: #444455;
+  background-color: #ffffff;
+}
+
+.highlight-item {
+  height: 68px;
+  padding: 14px;
+}
+
+.highlight-item .donation-title {
+  font-size: 125%;
+  font-weight: bold;
+  text-align: right;
+}
+
+.highlight-item .donation-value {
+  font-size: 225%;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+}
+
+#LOGO_SECTION {
+  position: absolute;
+
+  left: 8px;
+  top: 0;
+
+  width: 110px;
+  height: 96px;
+}
+
+.logo-entry {
+  width: 110px;
+  height: 96px;
+
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#MAIN_SECTION {
+  position: absolute;
+
+  right: 300px;
+  top: 0;
+
+  width: 1500px;
+  height: 96px;
+}
+
+.main-item {
+  height: 68px;
+  padding: 14px;
+}
+
+.main-item .title {
+  font-size: 125%;
+  font-weight: bold;
+  text-align: right;
+}
+
+.main-item .value {
+  font-size: 225%;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
 }
