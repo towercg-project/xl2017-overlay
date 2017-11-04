@@ -27,7 +27,7 @@ export class MainSection extends React.Component {
       <div id="MAIN_SECTION">
         <Carousel
             autoplay={true}
-            autoplayInterval={5000}
+            autoplayInterval={10000}
             decorators={[]}
             wrapAround={true}
             vertical={true}
