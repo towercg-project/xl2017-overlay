@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import * as ReactInterval from 'react-interval';
 import Carousel from 'nuka-carousel';
 
 import DonationAboutItem from './DonationAboutItem';
@@ -7,12 +7,16 @@ import DonationAboutItem from './DonationAboutItem';
 import { towercgConnect } from './TowerCGClientProvider';
 
 export class HighlightSection extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const {extralife} = this.props;
 
     const ed = extralife.users.ed;
     const cic = extralife.teams.cic;
-    const gb = extralife.teams['giant-bomb'];
+    const gwj = extralife.teams.gwj;
 
     return (
       <div id="HIGHLIGHT_SECTION">
@@ -25,9 +29,9 @@ export class HighlightSection extends React.Component {
             initialSlideHeight={96}
             easing="easeInCubic"
             speed={1000}>
-          <DonationAboutItem title={ed.displayName} value={ed.totalRaisedAmount} />
-          <DonationAboutItem title="CIC Extra Life" value={cic.totalRaisedAmount} />
-          <DonationAboutItem title="Giant Bomb + Community" value={gb.totalRaisedAmount} />
+          <DonationAboutItem title={ed.displayName} value={ed.sumDonations} />
+          <DonationAboutItem title="CIC Extra Life" value={cic.sumDonations} />
+          <DonationAboutItem title="Gamers With Jobs" value={gwj.sumDonations} />
         </Carousel>
       </div>
     );

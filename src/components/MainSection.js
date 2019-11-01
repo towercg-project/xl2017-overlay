@@ -15,8 +15,8 @@ export class MainSection extends React.Component {
     console.log(extralife)
 
     const mostRecentDonor = [
-      donation.donorName || "Anonymous",
-      "$" + parseFloat(donation.donationAmount).toLocaleString('en-US', {
+      donation.displayName || "Anonymous",
+      "$" + parseFloat(donation.amount).toLocaleString('en-US', {
         minimumIntegerDigits: 1,
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
@@ -35,7 +35,7 @@ export class MainSection extends React.Component {
             easing="easeInCubic"
             speed={1000}>
           <MainTextItem title="Donate now and help the kids!"
-                        value="https://bit.ly/xldonate" />
+                        value="https://bit.ly/xldonate2019" />
           <MainTextItem title="Most recent donor"
                         value={mostRecentDonor} />
         </Carousel>

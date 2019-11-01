@@ -1,8 +1,17 @@
 import * as React from 'react';
+import * as Interval from 'react-interval';
 
 import Carousel from 'nuka-carousel';
 
+const MAX_STANS = 1;
+
 export default class LogoSection extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { stan: 0 };
+  }
+
   render() {
     return (
       <div id="LOGO_SECTION">
@@ -28,7 +37,7 @@ export default class LogoSection extends React.Component {
             }} />
           </div>
           <div className="logo-entry">
-            <img src="/images/gb.png" style={{
+            <img src={`/images/gwj-${this.state.stan}.png`} style={{
               width: "110px",
               marginTop: "4px"
             }} />
